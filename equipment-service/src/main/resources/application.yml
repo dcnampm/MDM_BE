@@ -1,0 +1,63 @@
+spring:
+#  jpa:
+#    show-sql: true
+  profiles:
+    active: dev-bach_dx
+    group:
+      dev-bach_dx:
+        - "bach_dx_local"
+        - "dev"
+      dev-pvh:
+        - "pvh_test"
+        - "dev"
+      prod:
+        - "prod"
+      dev-prod:
+        - "prod"
+        - "dev"
+      dev-local:
+        - "dev"
+        - "local"
+  application:
+    name: equipment-service
+  cloud:
+    openfeign:
+      oauth2:
+        enabled: true
+  kafka:
+    consumer:
+      group-id: equipment-service-group
+    mail:
+      host: smtp.gmail.com
+      port: 587
+      username: bachbim069@gmail.com
+      password: ohhq kxhl csqf vpbr
+      properties:
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: true
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: pvhung2001@gmail.com
+#    password: tnbckrzpmiczhmca
+
+#logging:
+#  level:
+#    org.springframework.web.HttpLogging: DEBUG
+#    org.hibernate.sql: DEBUG
+#    org.hibernate.type.descriptor.sql: TRACE
+#    reactor.netty.http.server: DEBUG
+#    reactor.netty.http.client: DEBUG
+server:
+  error:
+    include-binding-errors: always
+    include-message: always
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+springdoc:
+  version: 1.0

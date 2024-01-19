@@ -1,0 +1,16 @@
+- thiết bị ở trạng thái mới thì mới có thể bàn giao
+- có hiển thị tên thiết bị, model, serial, status của thiết bị tại thời điểm bàn giao
+- Có menu dropdown chọn khoa phòng bàn giao
+- Có menu dropdown cho chọn MỘT cán bộ phụ trách chính thiết bị đó (người phụ trách sẽ là người trong khoa phòng đang nhận bàn giao thiết bị đó)
+- có phần chọn list các cán bộ sử dụng (các cán bộ sử dụng đều phải thuộc khoa phòng đó), phần chọn nhiều cán bộ sử dụng có thể làm cái button chọn 1 phát là chọn hết tất cả cán bộ ko?
+Hiện tại ở phần FE đang có lỗi là nếu chọn khoa Huyết học truyền máu => chọn cán bộ => chọn các khoa khác, thì khi đó list cán bộ ở khoa cũ vẫn đang giữ nguyên => expected: xoá hết 
+- Ngày bàn giao sẽ mặc định là ngày tại thời điểm bấm nút bàn giao (user có thể chọn để thay đổi)
+
+
+
+Phía BE
+=> khi bấm nút bàn giao => thiết bị sẽ chuyển về trạng thái PENDING_HANDOVER
+validate các cán bộ kia có thuộc khoa phòng đang bàn giao đến hay ko
+validate not null các thứ
+=> chờ người có authority: HANDOVER.APPROVE vào xác nhận => chuyển trạng thái sang IN_USE
+=> 

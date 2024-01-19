@@ -1,0 +1,3372 @@
+{
+  "individualResults": [
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "2",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "init",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__init.sql",
+          "executionTime": 234
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "remove risk level table and create supply",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__remove_risk_level_table_and_create_supply.sql",
+          "executionTime": 532
+        }
+      ],
+      "migrationsExecuted": 2,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-27T21:46:11.443601900",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-27T21:51:07.457676500",
+      "operation": "migrate",
+      "exception": "Migration V1__init.sql failed\n-----------------------------\nSQL State  : 42S01\nError Code : 1050\nMessage    : (conn\u003d2199) Table \u0027flyway_schema_history\u0027 already exists\nLocation   : src\\main\\resources\\db\\migration\\V1__init.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__init.sql)\nLine       : 59\nStatement  : CREATE TABLE flyway_schema_history\r\n(\r\n    installed_rank INT                     NOT NULL,\r\n    version        VARCHAR(50)             NULL,\r\n    `description`  VARCHAR(200)            NOT NULL,\r\n    type           VARCHAR(20)             NOT NULL,\r\n    script         VARCHAR(1000)           NOT NULL,\r\n    checksum       INT       DEFAULT NULL  NULL,\r\n    installed_by   VARCHAR(100)            NOT NULL,\r\n    installed_on   timestamp DEFAULT NOW() NOT NULL,\r\n    execution_time INT                     NOT NULL,\r\n    success        BIT                     NOT NULL,\r\n    CONSTRAINT PK_FLYWAY_SCHEMA_HISTORY PRIMARY KEY (installed_rank)\r\n)\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "init",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__init.sql",
+          "executionTime": 175
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-27T21:51:58.293666900",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "init setup",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__init_setup.sql",
+          "executionTime": 199
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-27T21:57:01.487361",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "init setup",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__init_setup.sql",
+          "executionTime": 194
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-28T16:23:28.225538600",
+      "operation": "migrate",
+      "exception": "Migration V2__setup_v2.sql failed\n---------------------------------\nSQL State  : HY000\nError Code : 1005\nMessage    : (conn\u003d268) Can\u0027t create table `mdm_equipment`.`supplies` (errno: 121 \"Duplicate key on write or update\")\nLocation   : src\\main\\resources\\db\\migration\\V2__setup_v2.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__setup_v2.sql)\nLine       : 160\nStatement  : ALTER TABLE supplies\r\n    ADD CONSTRAINT PROJECT FOREIGN KEY (project_id) REFERENCES projects (id) ON UPDATE RESTRICT ON DELETE SET NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "init setup",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__init_setup.sql",
+          "executionTime": 192
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-28T16:26:14.479987500",
+      "operation": "migrate",
+      "exception": "Migration V2__setup_v2.sql failed\n---------------------------------\nSQL State  : 42000\nError Code : 1091\nMessage    : (conn\u003d270) Can\u0027t DROP FOREIGN KEY `FK5sej5ndcwkmq5flmhwqksppkh`; check that it exists\nLocation   : src\\main\\resources\\db\\migration\\V2__setup_v2.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__setup_v2.sql)\nLine       : 160\nStatement  : ALTER TABLE equipment_supply\r\n    DROP FOREIGN KEY FK5sej5ndcwkmq5flmhwqksppkh\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 370
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-28T16:33:45.058636700",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "1",
+      "targetSchemaVersion": "2",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "create supplier table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__create_supplier_table.sql",
+          "executionTime": 79
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-29T21:53:48.514264500",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "2",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 395
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "create supplier table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__create_supplier_table.sql",
+          "executionTime": 59
+        }
+      ],
+      "migrationsExecuted": 2,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-30T00:11:14.317210400",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "3",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 463
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "create supplier table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__create_supplier_table.sql",
+          "executionTime": 69
+        },
+        {
+          "category": "Versioned",
+          "version": "3",
+          "description": "create repair table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3__create_repair_table.sql",
+          "executionTime": 52
+        }
+      ],
+      "migrationsExecuted": 3,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-30T22:15:17.491460400",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "4",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 454
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "create supplier table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__create_supplier_table.sql",
+          "executionTime": 69
+        },
+        {
+          "category": "Versioned",
+          "version": "3",
+          "description": "create repair table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3__create_repair_table.sql",
+          "executionTime": 98
+        },
+        {
+          "category": "Versioned",
+          "version": "4",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V4__.sql",
+          "executionTime": 210
+        }
+      ],
+      "migrationsExecuted": 4,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-31T01:04:36.153828700",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 377
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "create supplier table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__create_supplier_table.sql",
+          "executionTime": 61
+        }
+      ],
+      "migrationsExecuted": 2,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-31T01:14:02.420980300",
+      "operation": "migrate",
+      "exception": "Migration V3__create_repair_table.sql failed\n--------------------------------------------\nSQL State  : HY000\nError Code : 1005\nMessage    : (conn\u003d459) Can\u0027t create table `mdm_equipment`.`repairs` (errno: 150 \"Foreign key constraint is incorrectly formed\")\nLocation   : src\\main\\resources\\db\\migration\\V3__create_repair_table.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3__create_repair_table.sql)\nLine       : 28\nStatement  : ALTER TABLE repairs\r\n    ADD CONSTRAINT FK_REPAIRS_ON_REPAIR_COMPANY FOREIGN KEY (repair_company_id) REFERENCES suppliers (id) ON UPDATE RESTRICT ON DELETE SET NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 643
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-31T01:17:07.292269100",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-31T01:22:23.482160900",
+      "operation": "migrate",
+      "exception": "Migration V1__.sql failed\n-------------------------\nSQL State  : HY000\nError Code : 1005\nMessage    : (conn\u003d467) Can\u0027t create table `mdm_equipment`.`repairs` (errno: 150 \"Foreign key constraint is incorrectly formed\")\nLocation   : src\\main\\resources\\db\\migration\\V1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql)\nLine       : 351\nStatement  : ALTER TABLE repairs\r\n    ADD CONSTRAINT FK_REPAIRS_ON_REPAIR_COMPANY FOREIGN KEY (repair_company_id) REFERENCES suppliers (id) ON UPDATE RESTRICT ON DELETE SET NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 580
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-05-31T01:33:52.305073700",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 569
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-01T17:53:40.750471600",
+      "operation": "migrate",
+      "exception": "Migration V2__.sql failed\n-------------------------\nSQL State  : HY000\nError Code : 1005\nMessage    : (conn\u003d12) Can\u0027t create table `mdm_equipment`.`users` (errno: 150 \"Foreign key constraint is incorrectly formed\")\nLocation   : src\\main\\resources\\db\\migration\\V2__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__.sql)\nLine       : 65\nStatement  : ALTER TABLE users\r\n    ADD CONSTRAINT DEPARTMENT FOREIGN KEY (department_id) REFERENCES departments (id) ON UPDATE RESTRICT ON DELETE SET NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "2",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 550
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__.sql",
+          "executionTime": 239
+        }
+      ],
+      "migrationsExecuted": 2,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-01T17:56:31.598815700",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "3",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 609
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__.sql",
+          "executionTime": 271
+        },
+        {
+          "category": "Versioned",
+          "version": "3",
+          "description": "add service table and provider provides services table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3__add service table and provider_provides_services table.sql",
+          "executionTime": 68
+        }
+      ],
+      "migrationsExecuted": 3,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-01T22:51:56.216842",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 563
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__.sql",
+          "executionTime": 247
+        },
+        {
+          "category": "Versioned",
+          "version": "3",
+          "description": "add service table and provider provides services table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3__add service table and provider_provides_services table.sql",
+          "executionTime": 71
+        }
+      ],
+      "migrationsExecuted": 3,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T10:51:47.159677600",
+      "operation": "migrate",
+      "exception": "Migration V3_1__.sql failed\n---------------------------\nSQL State  : HY000\nError Code : 1553\nMessage    : (conn\u003d200) Cannot drop index \u0027FK_HANDOVERS_ON_DEPARTMENT\u0027: needed in a foreign key constraint\nLocation   : src\\main\\resources\\db\\migration\\V3_1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3_1__.sql)\nLine       : 4\nStatement  : ALTER TABLE handovers\r\n    DROP COLUMN department_id\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 562
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__.sql",
+          "executionTime": 265
+        },
+        {
+          "category": "Versioned",
+          "version": "3",
+          "description": "add service table and provider provides services table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3__add service table and provider_provides_services table.sql",
+          "executionTime": 71
+        }
+      ],
+      "migrationsExecuted": 3,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T10:54:06.913797100",
+      "operation": "migrate",
+      "exception": "Migration V3_1__.sql failed\n---------------------------\nSQL State  : HY000\nError Code : 1828\nMessage    : (conn\u003d204) Cannot drop column \u0027department_id\u0027: needed in a foreign key constraint \u0027mdm_equipment/FK_HANDOVERS_ON_DEPARTMENT\u0027\nLocation   : src\\main\\resources\\db\\migration\\V3_1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3_1__.sql)\nLine       : 5\nStatement  : ALTER TABLE handovers\r\n    DROP COLUMN department_id\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 566
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__.sql",
+          "executionTime": 288
+        },
+        {
+          "category": "Versioned",
+          "version": "3",
+          "description": "add service table and provider provides services table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3__add service table and provider_provides_services table.sql",
+          "executionTime": 69
+        }
+      ],
+      "migrationsExecuted": 3,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T10:54:32.331544700",
+      "operation": "migrate",
+      "exception": "Migration V3_1__.sql failed\n---------------------------\nSQL State  : HY000\nError Code : 1828\nMessage    : (conn\u003d208) Cannot drop column \u0027department_id\u0027: needed in a foreign key constraint \u0027mdm_equipment/FK_HANDOVERS_ON_DEPARTMENT\u0027\nLocation   : src\\main\\resources\\db\\migration\\V3_1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3_1__.sql)\nLine       : 5\nStatement  : ALTER TABLE handovers\r\n    DROP COLUMN department_id\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T11:02:04.253710300",
+      "operation": "migrate",
+      "exception": "Migration V1__.sql failed\n-------------------------\nSQL State  : HY000\nError Code : 1005\nMessage    : (conn\u003d212) Can\u0027t create table `mdm_equipment`.`users` (errno: 150 \"Foreign key constraint is incorrectly formed\")\nLocation   : src\\main\\resources\\db\\migration\\V1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql)\nLine       : 387\nStatement  : ALTER TABLE users\r\n    ADD CONSTRAINT DEPARTMENT FOREIGN KEY (department_id) REFERENCES departments (id) ON UPDATE CASCADE ON DELETE SET NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T11:03:05.512909500",
+      "operation": "migrate",
+      "exception": "Migration V1__.sql failed\n-------------------------\nSQL State  : HY000\nError Code : 1005\nMessage    : (conn\u003d217) Can\u0027t create table `mdm_equipment`.`handovers` (errno: 150 \"Foreign key constraint is incorrectly formed\")\nLocation   : src\\main\\resources\\db\\migration\\V1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql)\nLine       : 411\nStatement  : ALTER TABLE handovers\r\n    ADD CONSTRAINT FK_HANDOVERS_ON_DEPARTMENT FOREIGN KEY (department_id) REFERENCES departments (id) ON UPDATE CASCADE ON DELETE SET NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T11:03:50.437622100",
+      "operation": "migrate",
+      "exception": "Migration V1__.sql failed\n-------------------------\nSQL State  : HY000\nError Code : 1005\nMessage    : (conn\u003d220) Can\u0027t create table `mdm_equipment`.`handovers` (errno: 150 \"Foreign key constraint is incorrectly formed\")\nLocation   : src\\main\\resources\\db\\migration\\V1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql)\nLine       : 411\nStatement  : ALTER TABLE handovers\r\n    ADD CONSTRAINT FK_HANDOVERS_ON_DEPARTMENT FOREIGN KEY (department_id) REFERENCES departments (id) ON UPDATE CASCADE ON DELETE SET NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T11:04:08.348922400",
+      "operation": "migrate",
+      "exception": "Migration V1__.sql failed\n-------------------------\nSQL State  : HY000\nError Code : 1005\nMessage    : (conn\u003d223) Can\u0027t create table `mdm_equipment`.`handovers` (errno: 150 \"Foreign key constraint is incorrectly formed\")\nLocation   : src\\main\\resources\\db\\migration\\V1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql)\nLine       : 417\nStatement  : ALTER TABLE handovers\r\n    ADD CONSTRAINT FK_HANDOVERS_ON_RESPONSIBLE_PERSON FOREIGN KEY (responsible_person_id) REFERENCES users (id) ON UPDATE CASCADE ON DELETE SET NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T11:06:27.197494",
+      "operation": "migrate",
+      "exception": "Migration V1__.sql failed\n-------------------------\nSQL State  : HY000\nError Code : 1005\nMessage    : (conn\u003d226) Can\u0027t create table `mdm_equipment`.`inventories` (errno: 150 \"Foreign key constraint is incorrectly formed\")\nLocation   : src\\main\\resources\\db\\migration\\V1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql)\nLine       : 426\nStatement  : ALTER TABLE inventories\r\n    ADD CONSTRAINT FK_INVENTORIES_ON_INVENTORY_PERSON FOREIGN KEY (inventory_person_id) REFERENCES users (id) ON UPDATE CASCADE ON DELETE SET NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T11:07:44.061835500",
+      "operation": "migrate",
+      "exception": "Migration V1__.sql failed\n-------------------------\nSQL State  : HY000\nError Code : 1005\nMessage    : (conn\u003d229) Can\u0027t create table `mdm_equipment`.`repairs` (errno: 150 \"Foreign key constraint is incorrectly formed\")\nLocation   : src\\main\\resources\\db\\migration\\V1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql)\nLine       : 450\nStatement  : ALTER TABLE repairs\r\n    ADD CONSTRAINT FK_REPAIRS_ON_REPORTING_PERSON FOREIGN KEY (reporting_person_id) REFERENCES users (id) ON UPDATE CASCADE ON DELETE SET NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T11:09:03.315653900",
+      "operation": "migrate",
+      "exception": "Migration V1__.sql failed\n-------------------------\nSQL State  : HY000\nError Code : 1005\nMessage    : (conn\u003d232) Can\u0027t create table `mdm_equipment`.`suppliers` (errno: 150 \"Foreign key constraint is incorrectly formed\")\nLocation   : src\\main\\resources\\db\\migration\\V1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql)\nLine       : 453\nStatement  : ALTER TABLE suppliers\r\n    ADD CONSTRAINT FK_SUPPLIERS_ON_CONTACT_PERSON FOREIGN KEY (contact_person_id) REFERENCES users (id) ON UPDATE CASCADE ON DELETE SET NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T11:09:30.378070200",
+      "operation": "migrate",
+      "exception": "Migration V1__.sql failed\n-------------------------\nSQL State  : HY000\nError Code : 1005\nMessage    : (conn\u003d235) Can\u0027t create table `mdm_equipment`.`transfers` (errno: 150 \"Foreign key constraint is incorrectly formed\")\nLocation   : src\\main\\resources\\db\\migration\\V1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql)\nLine       : 477\nStatement  : ALTER TABLE transfers\r\n    ADD CONSTRAINT FK_TRANSFERS_ON_FROM_DEPARTMENT FOREIGN KEY (from_department_id) REFERENCES departments (id) ON UPDATE CASCADE ON DELETE SET NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T11:11:19.327326500",
+      "operation": "migrate",
+      "exception": "Migration V1__.sql failed\n-------------------------\nSQL State  : HY000\nError Code : 1005\nMessage    : (conn\u003d238) Can\u0027t create table `mdm_equipment`.`provider_provides_services` (errno: 150 \"Foreign key constraint is incorrectly formed\")\nLocation   : src\\main\\resources\\db\\migration\\V1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql)\nLine       : 498\nStatement  : ALTER TABLE provider_provides_services\r\n    ADD CONSTRAINT fk_proproser_on_service FOREIGN KEY (service_id) REFERENCES services (id) ON UPDATE CASCADE ON DELETE SET NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 964
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T11:12:15.211466900",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "1.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 993
+        },
+        {
+          "category": "Versioned",
+          "version": "1.1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1_1__.sql",
+          "executionTime": 11
+        }
+      ],
+      "migrationsExecuted": 2,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-02T19:17:23.528815300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "1.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 931
+        },
+        {
+          "category": "Versioned",
+          "version": "1.1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1_1__.sql",
+          "executionTime": 11
+        }
+      ],
+      "migrationsExecuted": 2,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-03T11:31:49.663116300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "1.1",
+      "targetSchemaVersion": "2",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "add file storage table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__add file storage table.sql",
+          "executionTime": 27
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-03T21:20:06.643303100",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "2",
+      "targetSchemaVersion": "2.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "2.1",
+          "description": " remove created at and updated at",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_1__ remove created at and updated at.sql",
+          "executionTime": 129
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-03T23:58:13.127403600",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "2.1",
+      "targetSchemaVersion": "2.2",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "2.2",
+          "description": " rename acceptance date to approval date",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_2__ rename acceptance_date to approval_date.sql",
+          "executionTime": 31
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-04T22:12:58.658739200",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "2.3",
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-04T23:42:02.656857100",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "2.3",
+      "targetSchemaVersion": "2.4",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "2.4",
+          "description": " create equipment user table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_4__ create equipment_user table.sql",
+          "executionTime": 45
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-04T23:42:41.799273500",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "2.4",
+      "targetSchemaVersion": "2.5",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "2.5",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_5__.sql",
+          "executionTime": 26
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-05T00:18:34.358792200",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "2.5",
+      "targetSchemaVersion": "2.6",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "2.6",
+          "description": "remove image field in repair table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2.6__remove image field in repair table.sql",
+          "executionTime": 12
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-05T01:19:46.919443600",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "2.6",
+      "targetSchemaVersion": "2.7",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "2.7",
+          "description": " change associated entity id type from string to long",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_7__ change associated entity id type from string to long.sql",
+          "executionTime": 28
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-05T12:41:28.786028800",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "2.7",
+      "targetSchemaVersion": "2.8",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "2.8",
+          "description": " add content type in file storage table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_8__ add content type in file storage table.sql",
+          "executionTime": 23
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-05T14:20:15.848249700",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "2.8",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 1085
+        },
+        {
+          "category": "Versioned",
+          "version": "1.1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1_1__.sql",
+          "executionTime": 14
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "add file storage table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__add file storage table.sql",
+          "executionTime": 10
+        },
+        {
+          "category": "Versioned",
+          "version": "2.1",
+          "description": " remove created at and updated at",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_1__ remove created at and updated at.sql",
+          "executionTime": 122
+        },
+        {
+          "category": "Versioned",
+          "version": "2.2",
+          "description": " rename acceptance date to approval date",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_2__ rename acceptance_date to approval_date.sql",
+          "executionTime": 19
+        },
+        {
+          "category": "Versioned",
+          "version": "2.3",
+          "description": " remove equipment status and handover status from handovers table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_3__ remove equipment_status and handover_status from handovers table.sql",
+          "executionTime": 21
+        },
+        {
+          "category": "Versioned",
+          "version": "2.4",
+          "description": " create equipment user table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_4__ create equipment_user table.sql",
+          "executionTime": 34
+        },
+        {
+          "category": "Versioned",
+          "version": "2.5",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_5__.sql",
+          "executionTime": 25
+        },
+        {
+          "category": "Versioned",
+          "version": "2.6",
+          "description": "remove image field in repair table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2.6__remove image field in repair table.sql",
+          "executionTime": 11
+        },
+        {
+          "category": "Versioned",
+          "version": "2.7",
+          "description": " change associated entity id type from string to long",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_7__ change associated entity id type from string to long.sql",
+          "executionTime": 19
+        },
+        {
+          "category": "Versioned",
+          "version": "2.8",
+          "description": " add content type in file storage table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_8__ add content type in file storage table.sql",
+          "executionTime": 51
+        }
+      ],
+      "migrationsExecuted": 11,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-07T17:18:36.424275300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "2.8",
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-09T00:04:05.217940500",
+      "operation": "migrate",
+      "exception": "Migration V2_9__add password filed in users table.sql failed\n------------------------------------------------------------\nSQL State  : 01000\nError Code : 1265\nMessage    : (conn\u003d1604) Data truncated for column \u0027password\u0027 at row 1\nLocation   : src\\main\\resources\\db\\migration\\V2_9__add password filed in users table.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_9__add password filed in users table.sql)\nLine       : 4\nStatement  : ALTER TABLE users\r\n    MODIFY password VARCHAR(255) NOT NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "2.8",
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-09T00:05:10.007538600",
+      "operation": "migrate",
+      "exception": "Migration V2_9__ add password field to user table.sql failed\n------------------------------------------------------------\nSQL State  : 42S21\nError Code : 1060\nMessage    : (conn\u003d1610) Duplicate column name \u0027password\u0027\nLocation   : src\\main\\resources\\db\\migration\\V2_9__ add password field to user table.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_9__ add password field to user table.sql)\nLine       : 1\nStatement  : ALTER TABLE users\r\n    ADD password VARCHAR(255) NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "2.8",
+      "targetSchemaVersion": "2.9",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "2.9",
+          "description": " add password field to user table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_9__ add password field to user table.sql",
+          "executionTime": 29
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-09T00:06:25.258498100",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "2.9",
+      "targetSchemaVersion": "3",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "3",
+          "description": " add forgot password table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3__ add forgot password table.sql",
+          "executionTime": 61
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-09T15:20:47.761020300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "3",
+      "targetSchemaVersion": "3.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "3.1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3_1__.sql",
+          "executionTime": 31
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-10T21:08:06.162484300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "3.1",
+      "targetSchemaVersion": "3.3",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "3.3",
+          "description": " remove inventory status",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3_3__ remove inventory status.sql",
+          "executionTime": 35
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-11T12:18:42.570825500",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "3.3",
+      "targetSchemaVersion": "4",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "4",
+          "description": "add equipment group table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V4__add equipment group table.sql",
+          "executionTime": 40
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-12T08:59:07.919448600",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "4",
+      "targetSchemaVersion": "4.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "4.1",
+          "description": "update not null constraint on equipment categories table and equipment groups table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V4_1__update not null constraint on equipment categories table and equipment groups table.sql",
+          "executionTime": 82
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-12T09:01:06.992270600",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "4.1",
+      "targetSchemaVersion": "4.2",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "4.2",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V4_2__.sql",
+          "executionTime": 35
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-12T13:07:06.296852600",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "4.2",
+      "targetSchemaVersion": "4.3",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "4.3",
+          "description": "drop unique on alias in equipment categories table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V4_3__drop unique on alias in equipment categories table.sql",
+          "executionTime": 11
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-12T13:12:03.663494400",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "4.3",
+      "targetSchemaVersion": "5",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "5",
+          "description": "create equipment unit table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5__create equipment unit table.sql",
+          "executionTime": 61
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-12T20:47:42.652543300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "5",
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-12T21:47:17.370903300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "5",
+      "targetSchemaVersion": "5.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "5.1",
+          "description": "drop unique constraint on hash code",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_1__drop unique constraint on hash_code.sql",
+          "executionTime": 11
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-12T21:48:45.030928400",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "5.1",
+      "targetSchemaVersion": "5.2",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "5.2",
+          "description": " add created by in handovers table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_2__ add created by in handovers table.sql",
+          "executionTime": 58
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-13T13:30:42.623648400",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "5.2",
+      "targetSchemaVersion": "5.4",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "5.4",
+          "description": "add approval on handover table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_4__add approval on handover table.sql",
+          "executionTime": 38
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-13T14:44:00.726121600",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "5.4",
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-13T14:50:26.594176400",
+      "operation": "migrate",
+      "exception": "Migration V5_5__add approval on handover table.sql failed\n---------------------------------------------------------\nSQL State  : 42S21\nError Code : 1060\nMessage    : (conn\u003d246) Duplicate column name \u0027approval_date\u0027\nLocation   : src\\main\\resources\\db\\migration\\V5_5__add approval on handover table.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_5__add approval on handover table.sql)\nLine       : 1\nStatement  : ALTER TABLE handovers\r\n    ADD approval_date date NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "5.4",
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-13T14:51:59.553076600",
+      "operation": "migrate",
+      "exception": "Migration V5_5__add approval on handover table.sql failed\n---------------------------------------------------------\nSQL State  : 42S21\nError Code : 1060\nMessage    : (conn\u003d249) Duplicate column name \u0027approval_date\u0027\nLocation   : src\\main\\resources\\db\\migration\\V5_5__add approval on handover table.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_5__add approval on handover table.sql)\nLine       : 1\nStatement  : ALTER TABLE handovers\r\n    ADD approval_date date NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "5.4",
+      "targetSchemaVersion": "5.5",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "5.5",
+          "description": "add approval on handover table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_5__add approval on handover table.sql",
+          "executionTime": 35
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-13T14:53:08.423788500",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "5.5",
+      "targetSchemaVersion": "6",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "6",
+          "description": "remove equipment user many to many relationship",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V6__remove equipment user many to many relationship.sql",
+          "executionTime": 42
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-13T14:55:39.304735900",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "6",
+      "targetSchemaVersion": "7",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "7",
+          "description": "add notification, notification config and user read notification table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V7__add notification, notification config and user read notification table.sql",
+          "executionTime": 87
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-13T16:29:46.679213900",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "7",
+      "targetSchemaVersion": "7.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "7.1",
+          "description": "modify notifications content from text to json",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V7_1__modify notifications content from text to json.sql",
+          "executionTime": 13
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-13T16:46:49.193174300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "7.1",
+      "targetSchemaVersion": "7.2",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "7.2",
+          "description": " add note filed to handovers table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V7_2__ add note filed to handovers table.sql",
+          "executionTime": 18
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-13T16:49:16.601223",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "7.2",
+      "targetSchemaVersion": "7.3",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "7.3",
+          "description": " alter notification and notification config table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V7_3__ alter notification and notification config table.sql",
+          "executionTime": 113
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-13T22:24:44.749353400",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "7.3",
+      "targetSchemaVersion": "7.4",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "7.4",
+          "description": " add note and status on handovers table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V7_4__ add note and status on handovers table.sql",
+          "executionTime": 74
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-14T15:38:12.407418900",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "7.4",
+      "targetSchemaVersion": "8",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "8",
+          "description": " modify all data type from date to datetime",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V8__ modify all data type from date to datetime.sql",
+          "executionTime": 319
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-15T10:21:22.587228500",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "8",
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-15T18:23:38.836263900",
+      "operation": "migrate",
+      "exception": "Migration V9__add repair ticket, broken report ticket, ticket processes, add not null constraint on some  local date time data type.sql failed\n----------------------------------------------------------------------------------------------------------------------------------------------\nSQL State  : 42000\nError Code : 1072\nMessage    : (conn\u003d79) Key column \u0027\u0027 doesn\u0027t exist in table\nLocation   : src\\main\\resources\\db\\migration\\V9__add repair ticket, broken report ticket, ticket processes, add not null constraint on some  local date time data type.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V9__add repair ticket, broken report ticket, ticket processes, add not null constraint on some  local date time data type.sql)\nLine       : 54\nStatement  : ALTER TABLE broken_report_tickets\r\n    ADD CONSTRAINT code UNIQUE (``)\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "8",
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-15T18:28:32.257025100",
+      "operation": "migrate",
+      "exception": "Migration V9__add repair ticket, broken report ticket, ticket processes, add not null constraint on some  local date time data type.sql failed\n----------------------------------------------------------------------------------------------------------------------------------------------\nSQL State  : 42S01\nError Code : 1050\nMessage    : (conn\u003d87) Table \u0027broken_report_ticket_processes\u0027 already exists\nLocation   : src\\main\\resources\\db\\migration\\V9__add repair ticket, broken report ticket, ticket processes, add not null constraint on some  local date time data type.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V9__add repair ticket, broken report ticket, ticket processes, add not null constraint on some  local date time data type.sql)\nLine       : 1\nStatement  : CREATE TABLE broken_report_ticket_processes\r\n(\r\n    id                      BIGINT AUTO_INCREMENT NOT NULL,\r\n    creator_id              BIGINT                NULL,\r\n    created_date            datetime              NOT NULL,\r\n    creator_note            TEXT                  NULL,\r\n    approval_date           datetime              NULL,\r\n    approver_note           TEXT                  NULL,\r\n    approver_id             BIGINT                NULL,\r\n    is_accepted             BIT(1)                NULL,\r\n    broken_report_ticket_id BIGINT                NOT NULL,\r\n    CONSTRAINT pk_broken_report_ticket_processes PRIMARY KEY (id)\r\n)\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "8",
+      "targetSchemaVersion": "9",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "9",
+          "description": "add repair ticket, broken report ticket, ticket processes, add not null constraint on some  local date time data type",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V9__add repair ticket, broken report ticket, ticket processes, add not null constraint on some  local date time data type.sql",
+          "executionTime": 363
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-15T18:32:21.823122300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "9",
+      "targetSchemaVersion": "10",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "10",
+          "description": " drop all ticket processes table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V10__ drop all ticket processes table.sql",
+          "executionTime": 261
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-15T20:36:21.033062700",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 900
+        },
+        {
+          "category": "Versioned",
+          "version": "1.1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1_1__.sql",
+          "executionTime": 11
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "add file storage table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__add file storage table.sql",
+          "executionTime": 17
+        },
+        {
+          "category": "Versioned",
+          "version": "2.1",
+          "description": " remove created at and updated at",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_1__ remove created at and updated at.sql",
+          "executionTime": 163
+        },
+        {
+          "category": "Versioned",
+          "version": "2.2",
+          "description": " rename acceptance date to approval date",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_2__ rename acceptance_date to approval_date.sql",
+          "executionTime": 20
+        },
+        {
+          "category": "Versioned",
+          "version": "2.3",
+          "description": " remove equipment status and handover status from handovers table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_3__ remove equipment_status and handover_status from handovers table.sql",
+          "executionTime": 22
+        },
+        {
+          "category": "Versioned",
+          "version": "2.4",
+          "description": " create equipment user table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_4__ create equipment_user table.sql",
+          "executionTime": 46
+        },
+        {
+          "category": "Versioned",
+          "version": "2.5",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_5__.sql",
+          "executionTime": 27
+        },
+        {
+          "category": "Versioned",
+          "version": "2.6",
+          "description": "remove image field in repair table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2.6__remove image field in repair table.sql",
+          "executionTime": 12
+        },
+        {
+          "category": "Versioned",
+          "version": "2.7",
+          "description": " change associated entity id type from string to long",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_7__ change associated entity id type from string to long.sql",
+          "executionTime": 20
+        },
+        {
+          "category": "Versioned",
+          "version": "2.8",
+          "description": " add content type in file storage table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_8__ add content type in file storage table.sql",
+          "executionTime": 34
+        },
+        {
+          "category": "Versioned",
+          "version": "2.9",
+          "description": " add password field to user table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_9__ add password field to user table.sql",
+          "executionTime": 83
+        },
+        {
+          "category": "Versioned",
+          "version": "3",
+          "description": " add forgot password table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3__ add forgot password table.sql",
+          "executionTime": 27
+        }
+      ],
+      "migrationsExecuted": 13,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-16T13:29:23.227695200",
+      "operation": "migrate",
+      "exception": "Migration V3_1__.sql failed\n---------------------------\nSQL State  : 42S22\nError Code : 1054\nMessage    : (conn\u003d216) Unknown column \u0027otp\u0027 in \u0027forgot_password\u0027\nLocation   : src\\main\\resources\\db\\migration\\V3_1__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3_1__.sql)\nLine       : 1\nStatement  : ALTER TABLE forgot_password\r\n    CHANGE otp uuid VARCHAR(255)\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 987
+        },
+        {
+          "category": "Versioned",
+          "version": "1.1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1_1__.sql",
+          "executionTime": 11
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "add file storage table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__add file storage table.sql",
+          "executionTime": 7
+        },
+        {
+          "category": "Versioned",
+          "version": "2.1",
+          "description": " remove created at and updated at",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_1__ remove created at and updated at.sql",
+          "executionTime": 124
+        },
+        {
+          "category": "Versioned",
+          "version": "2.2",
+          "description": " rename acceptance date to approval date",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_2__ rename acceptance_date to approval_date.sql",
+          "executionTime": 19
+        },
+        {
+          "category": "Versioned",
+          "version": "2.3",
+          "description": " remove equipment status and handover status from handovers table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_3__ remove equipment_status and handover_status from handovers table.sql",
+          "executionTime": 20
+        },
+        {
+          "category": "Versioned",
+          "version": "2.4",
+          "description": " create equipment user table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_4__ create equipment_user table.sql",
+          "executionTime": 36
+        },
+        {
+          "category": "Versioned",
+          "version": "2.5",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_5__.sql",
+          "executionTime": 33
+        },
+        {
+          "category": "Versioned",
+          "version": "2.6",
+          "description": "remove image field in repair table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2.6__remove image field in repair table.sql",
+          "executionTime": 12
+        },
+        {
+          "category": "Versioned",
+          "version": "2.7",
+          "description": " change associated entity id type from string to long",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_7__ change associated entity id type from string to long.sql",
+          "executionTime": 37
+        },
+        {
+          "category": "Versioned",
+          "version": "2.8",
+          "description": " add content type in file storage table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_8__ add content type in file storage table.sql",
+          "executionTime": 35
+        },
+        {
+          "category": "Versioned",
+          "version": "2.9",
+          "description": " add password field to user table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_9__ add password field to user table.sql",
+          "executionTime": 85
+        },
+        {
+          "category": "Versioned",
+          "version": "3",
+          "description": " add forgot password table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3__ add forgot password table.sql",
+          "executionTime": 55
+        },
+        {
+          "category": "Versioned",
+          "version": "3.3",
+          "description": " remove inventory status",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3_3__ remove inventory status.sql",
+          "executionTime": 17
+        },
+        {
+          "category": "Versioned",
+          "version": "4",
+          "description": "add equipment group table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V4__add equipment group table.sql",
+          "executionTime": 28
+        },
+        {
+          "category": "Versioned",
+          "version": "4.1",
+          "description": "update not null constraint on equipment categories table and equipment groups table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V4_1__update not null constraint on equipment categories table and equipment groups table.sql",
+          "executionTime": 78
+        },
+        {
+          "category": "Versioned",
+          "version": "4.2",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V4_2__.sql",
+          "executionTime": 25
+        },
+        {
+          "category": "Versioned",
+          "version": "4.3",
+          "description": "drop unique on alias in equipment categories table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V4_3__drop unique on alias in equipment categories table.sql",
+          "executionTime": 9
+        },
+        {
+          "category": "Versioned",
+          "version": "5",
+          "description": "create equipment unit table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5__create equipment unit table.sql",
+          "executionTime": 30
+        },
+        {
+          "category": "Versioned",
+          "version": "5.1",
+          "description": "drop unique constraint on hash code",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_1__drop unique constraint on hash_code.sql",
+          "executionTime": 11
+        },
+        {
+          "category": "Versioned",
+          "version": "5.2",
+          "description": " add created by in handovers table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_2__ add created by in handovers table.sql",
+          "executionTime": 40
+        },
+        {
+          "category": "Versioned",
+          "version": "5.4",
+          "description": " remove document column on handovers and transfers table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_4__ remove document column on handovers and transfers table.sql",
+          "executionTime": 17
+        },
+        {
+          "category": "Versioned",
+          "version": "5.5",
+          "description": "add approval on handover table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_5__add approval on handover table.sql",
+          "executionTime": 39
+        }
+      ],
+      "migrationsExecuted": 23,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-16T13:30:53.461779",
+      "operation": "migrate",
+      "exception": "Migration V6__remove equipment user many to many relationship.sql failed\n------------------------------------------------------------------------\nSQL State  : 42000\nError Code : 1091\nMessage    : (conn\u003d220) Can\u0027t DROP COLUMN `document`; check that it exists\nLocation   : src\\main\\resources\\db\\migration\\V6__remove equipment user many to many relationship.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V6__remove equipment user many to many relationship.sql)\nLine       : 9\nStatement  : ALTER TABLE handovers\r\n    DROP COLUMN document\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "10",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1__.sql",
+          "executionTime": 904
+        },
+        {
+          "category": "Versioned",
+          "version": "1.1",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V1_1__.sql",
+          "executionTime": 11
+        },
+        {
+          "category": "Versioned",
+          "version": "2",
+          "description": "add file storage table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2__add file storage table.sql",
+          "executionTime": 9
+        },
+        {
+          "category": "Versioned",
+          "version": "2.1",
+          "description": " remove created at and updated at",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_1__ remove created at and updated at.sql",
+          "executionTime": 125
+        },
+        {
+          "category": "Versioned",
+          "version": "2.2",
+          "description": " rename acceptance date to approval date",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_2__ rename acceptance_date to approval_date.sql",
+          "executionTime": 19
+        },
+        {
+          "category": "Versioned",
+          "version": "2.3",
+          "description": " remove equipment status and handover status from handovers table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_3__ remove equipment_status and handover_status from handovers table.sql",
+          "executionTime": 20
+        },
+        {
+          "category": "Versioned",
+          "version": "2.4",
+          "description": " create equipment user table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_4__ create equipment_user table.sql",
+          "executionTime": 39
+        },
+        {
+          "category": "Versioned",
+          "version": "2.5",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_5__.sql",
+          "executionTime": 28
+        },
+        {
+          "category": "Versioned",
+          "version": "2.6",
+          "description": "remove image field in repair table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2.6__remove image field in repair table.sql",
+          "executionTime": 11
+        },
+        {
+          "category": "Versioned",
+          "version": "2.7",
+          "description": " change associated entity id type from string to long",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_7__ change associated entity id type from string to long.sql",
+          "executionTime": 18
+        },
+        {
+          "category": "Versioned",
+          "version": "2.8",
+          "description": " add content type in file storage table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_8__ add content type in file storage table.sql",
+          "executionTime": 23
+        },
+        {
+          "category": "Versioned",
+          "version": "2.9",
+          "description": " add password field to user table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V2_9__ add password field to user table.sql",
+          "executionTime": 80
+        },
+        {
+          "category": "Versioned",
+          "version": "3",
+          "description": " add forgot password table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3__ add forgot password table.sql",
+          "executionTime": 21
+        },
+        {
+          "category": "Versioned",
+          "version": "3.3",
+          "description": " remove inventory status",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V3_3__ remove inventory status.sql",
+          "executionTime": 16
+        },
+        {
+          "category": "Versioned",
+          "version": "4",
+          "description": "add equipment group table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V4__add equipment group table.sql",
+          "executionTime": 26
+        },
+        {
+          "category": "Versioned",
+          "version": "4.1",
+          "description": "update not null constraint on equipment categories table and equipment groups table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V4_1__update not null constraint on equipment categories table and equipment groups table.sql",
+          "executionTime": 80
+        },
+        {
+          "category": "Versioned",
+          "version": "4.2",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V4_2__.sql",
+          "executionTime": 29
+        },
+        {
+          "category": "Versioned",
+          "version": "4.3",
+          "description": "drop unique on alias in equipment categories table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V4_3__drop unique on alias in equipment categories table.sql",
+          "executionTime": 20
+        },
+        {
+          "category": "Versioned",
+          "version": "5",
+          "description": "create equipment unit table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5__create equipment unit table.sql",
+          "executionTime": 38
+        },
+        {
+          "category": "Versioned",
+          "version": "5.1",
+          "description": "drop unique constraint on hash code",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_1__drop unique constraint on hash_code.sql",
+          "executionTime": 12
+        },
+        {
+          "category": "Versioned",
+          "version": "5.2",
+          "description": " add created by in handovers table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_2__ add created by in handovers table.sql",
+          "executionTime": 34
+        },
+        {
+          "category": "Versioned",
+          "version": "5.4",
+          "description": " remove document column on handovers and transfers table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_4__ remove document column on handovers and transfers table.sql",
+          "executionTime": 17
+        },
+        {
+          "category": "Versioned",
+          "version": "5.5",
+          "description": "add approval on handover table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V5_5__add approval on handover table.sql",
+          "executionTime": 33
+        },
+        {
+          "category": "Versioned",
+          "version": "6",
+          "description": "remove equipment user many to many relationship",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V6__remove equipment user many to many relationship.sql",
+          "executionTime": 30
+        },
+        {
+          "category": "Versioned",
+          "version": "7",
+          "description": "add notification, notification config and user read notification table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V7__add notification, notification config and user read notification table.sql",
+          "executionTime": 48
+        },
+        {
+          "category": "Versioned",
+          "version": "7.1",
+          "description": "modify notifications content from text to json",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V7_1__modify notifications content from text to json.sql",
+          "executionTime": 9
+        },
+        {
+          "category": "Versioned",
+          "version": "7.2",
+          "description": " add note filed to handovers table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V7_2__ add note filed to handovers table.sql",
+          "executionTime": 18
+        },
+        {
+          "category": "Versioned",
+          "version": "7.3",
+          "description": " alter notification and notification config table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V7_3__ alter notification and notification config table.sql",
+          "executionTime": 55
+        },
+        {
+          "category": "Versioned",
+          "version": "7.4",
+          "description": " add note and status on handovers table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V7_4__ add note and status on handovers table.sql",
+          "executionTime": 38
+        },
+        {
+          "category": "Versioned",
+          "version": "8",
+          "description": " modify all data type from date to datetime",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V8__ modify all data type from date to datetime.sql",
+          "executionTime": 293
+        },
+        {
+          "category": "Versioned",
+          "version": "9",
+          "description": "add repair ticket, broken report ticket, ticket processes, add not null constraint on some  local date time data type",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V9__add repair ticket, broken report ticket, ticket processes, add not null constraint on some  local date time data type.sql",
+          "executionTime": 384
+        },
+        {
+          "category": "Versioned",
+          "version": "10",
+          "description": " drop all ticket processes table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V10__ drop all ticket processes table.sql",
+          "executionTime": 291
+        }
+      ],
+      "migrationsExecuted": 32,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-16T13:32:09.849262500",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "10",
+      "targetSchemaVersion": "10.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "10.1",
+          "description": " add priority to broken report ticket table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V10_1__ add priority to broken report ticket table.sql",
+          "executionTime": 101
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-16T22:41:16.191895400",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "10.1",
+      "targetSchemaVersion": "10.2",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "10.2",
+          "description": "rename broken report ticket to report broken tickets",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V10_2__rename broken_report_ticket to report_broken_tickets.sql",
+          "executionTime": 44
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-17T01:46:38.212847400",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "10.3",
+      "targetSchemaVersion": "10.4",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "10.4",
+          "description": "add repair note",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V10_4__add repair note.sql",
+          "executionTime": 23
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-19T02:58:46.149376400",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "10.4",
+      "targetSchemaVersion": "10.5",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "10.5",
+          "description": " add acceptance tester id on repair ticket table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V10_5__ add acceptance tester id on repair ticket table.sql",
+          "executionTime": 60
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-19T22:08:40.346886",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "10.5",
+      "targetSchemaVersion": "10.6",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "10.6",
+          "description": " add acceptance test date ",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V10_6__ add acceptance test date .sql",
+          "executionTime": 32
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-19T23:10:06.931419300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "10.6",
+      "targetSchemaVersion": "11",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "11",
+          "description": " alter transfer class to extend ticket class",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V11__ alter transfer class to extend ticket class.sql",
+          "executionTime": 186
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-20T13:05:11.865982300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "11",
+      "targetSchemaVersion": "12",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "12",
+          "description": "alter liquidations table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V12__alter liquidations table.sql",
+          "executionTime": 220
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-21T17:06:45.909927800",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "12",
+      "targetSchemaVersion": "13",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "13",
+          "description": " rename to maintenance tickets and transfer tickets",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V13__ rename to maintenance_tickets and transfer_tickets.sql",
+          "executionTime": 49
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-27T22:16:41.118069300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "13",
+      "targetSchemaVersion": "14",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "14",
+          "description": "add some fields to maintenance table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V14__add some fields to maintenance table.sql",
+          "executionTime": 193
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-27T22:44:16.327424",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "14",
+      "targetSchemaVersion": "14.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "14.1",
+          "description": " drop maintenance status",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V14_1__ drop maintenance status.sql",
+          "executionTime": 23
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-28T00:00:19.195314200",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "14.1",
+      "targetSchemaVersion": "14.2",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "14.2",
+          "description": "add next time maintenances",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V14_2__add next time maintenances.sql",
+          "executionTime": 32
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-28T00:00:50.572944700",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "14.2",
+      "targetSchemaVersion": "14.3",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "14.3",
+          "description": " remove next time in maintenance tickets taable",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V14_3__ remove next time in maintenance tickets taable.sql",
+          "executionTime": 30
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-28T16:47:26.664832300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "14.3",
+      "targetSchemaVersion": "14.4",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "14.4",
+          "description": " add not null constraint on some field in equipments table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V14_4__ add not null constraint on some field in equipments table.sql",
+          "executionTime": 196
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-06-28T17:33:33.865757300",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "14.4",
+      "targetSchemaVersion": "14.5",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "14.5",
+          "description": " add coloumn maintenance company id on maintenance table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V14_5__ add coloumn maintenance company id on maintenance table.sql",
+          "executionTime": 46
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-01T22:04:44.650396500",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "14.5",
+      "targetSchemaVersion": "15",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "15",
+          "description": " alter inspection class to extend ticket class",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V15__ alter inspection class to extend ticket class.sql",
+          "executionTime": 180
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-03T18:05:43.686225200",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "15",
+      "targetSchemaVersion": "15.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "15.1",
+          "description": " rename inspections table to inspection tickets",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V15_1__ rename inspections table to inspection_tickets.sql",
+          "executionTime": 11
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-03T18:14:51.591006400",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "15.1",
+      "targetSchemaVersion": "15.2",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "15.2",
+          "description": "rename maintenance company id to inspection company id",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V15_2__rename maintenance company id to inspection company id.sql",
+          "executionTime": 22
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-04T22:17:09.128544800",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "15.2",
+      "targetSchemaVersion": "15.3",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "15.3",
+          "description": "add inspection evaluation status",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V15_3__add inspection evaluation status.sql",
+          "executionTime": 15
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-04T22:48:09.346354700",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "15.3",
+      "targetSchemaVersion": "15.4",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "15.4",
+          "description": "drop not null constraint on last time in inspection tickets table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V15_4__drop not null constraint on last_time in inspection_tickets table.sql",
+          "executionTime": 14
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-06T01:09:28.022754200",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "15.4",
+      "targetSchemaVersion": "15.5",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "15.5",
+          "description": "rename table liquidations to liquidation tickets",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V15_5__rename table liquidations to liquidation_tickets.sql",
+          "executionTime": 18
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-06T03:38:08.282601700",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "15.5",
+      "targetSchemaVersion": "15.6",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "15.6",
+          "description": "rename handovers to handover tickets",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V15_6__rename handovers to handover_tickets.sql",
+          "executionTime": 35
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-08T15:12:25.308822600",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "15.6",
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-08T15:23:25.422563700",
+      "operation": "migrate",
+      "exception": "Migration V16__ handover ticket entity now extend ticket class.sql failed\n-------------------------------------------------------------------------\nSQL State  : 22007\nError Code : 1292\nMessage    : (conn\u003d589) Incorrect datetime value: \u0027\u0027 for column `mdm_equipment`.`handover_tickets`.`created_date` at row 1\nLocation   : src\\main\\resources\\db\\migration\\V16__ handover ticket entity now extend ticket class.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V16__ handover ticket entity now extend ticket class.sql)\nLine       : 22\nStatement  : UPDATE handover_tickets\r\nSET created_date \u003d \u0027\u0027\r\nWHERE created_date IS NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "15.6",
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-08T15:25:36.691078100",
+      "operation": "migrate",
+      "exception": "Migration V16__ handover ticket entity now extend ticket class.sql failed\n-------------------------------------------------------------------------\nSQL State  : 42S21\nError Code : 1060\nMessage    : (conn\u003d592) Duplicate column name \u0027code\u0027\nLocation   : src\\main\\resources\\db\\migration\\V16__ handover ticket entity now extend ticket class.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V16__ handover ticket entity now extend ticket class.sql)\nLine       : 1\nStatement  : ALTER TABLE handover_tickets\r\n    ADD code VARCHAR(255) NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "15.6",
+      "targetSchemaVersion": "16",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "16",
+          "description": " handover ticket entity now extend ticket class",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V16__ handover ticket entity now extend ticket class.sql",
+          "executionTime": 99
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-08T15:28:13.329965100",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "16",
+      "targetSchemaVersion": "16.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "16.1",
+          "description": "drop department on handover ticket table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V16_1__drop department on handover ticket table.sql",
+          "executionTime": 37
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-12T18:54:05.904914400",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "16.1",
+      "targetSchemaVersion": "17",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "17",
+          "description": "remove clinic inspection, cv radiation, external assessment, radiation inspection",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V17__remove clinic inspection, cv radiation, external assessment, radiation inspection.sql",
+          "executionTime": 109
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-13T18:05:26.682911100",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "17",
+      "targetSchemaVersion": "18",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "18",
+          "description": "add department id to handover table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V18__add department id to handover table.sql",
+          "executionTime": 62
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-14T11:14:17.382937200",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "18",
+      "targetSchemaVersion": "18.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "18.1",
+          "description": "add report broken ticket id field to repair table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V18_1__add report broken ticket id field to repair table.sql",
+          "executionTime": 56
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-14T17:25:07.185155400",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "18.1",
+      "targetSchemaVersion": "18.2",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "18.2",
+          "description": "remove report broken ticket id and add not null on equipment unit name field",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V18_2__remove report broken ticket id and add not null on equipment unit name field.sql",
+          "executionTime": 77
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-15T23:03:10.160954",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "18.2",
+      "targetSchemaVersion": "19",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "19",
+          "description": "",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V19__.sql",
+          "executionTime": 275
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-22T15:52:30.055382500",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "19",
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-24T01:02:33.090511100",
+      "operation": "migrate",
+      "exception": "Migration V20__.sql failed\n--------------------------\nSQL State  : 22007\nError Code : 1292\nMessage    : (conn\u003d180) Truncated incorrect INTEGER value: \u0027DDT\u0027\nLocation   : src\\main\\resources\\db\\migration\\V20__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V20__.sql)\nLine       : 1\nStatement  : ALTER TABLE notification_configs\r\n    CHANGE role_can_receive_notification role_id BIGINT\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "19",
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-24T01:03:08.364383700",
+      "operation": "migrate",
+      "exception": "Migration V20__.sql failed\n--------------------------\nSQL State  : HY000\nError Code : 1830\nMessage    : (conn\u003d183) Column \u0027department_id\u0027 cannot be NOT NULL: needed in a foreign key constraint \u0027mdm_equipment/FK_HANDOVER_TICKETS_ON_DEPARTMENT\u0027 SET NULL\nLocation   : src\\main\\resources\\db\\migration\\V20__.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V20__.sql)\nLine       : 10\nStatement  : ALTER TABLE handover_tickets\r\n    MODIFY department_id BIGINT NOT NULL\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "19",
+      "targetSchemaVersion": null,
+      "schemaName": "mdm_equipment",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-24T01:05:01.277292300",
+      "operation": "migrate",
+      "exception": "Migration V20__update notification configs table, rename role_can_receive notification to role id.sql failed\n------------------------------------------------------------------------------------------------------------\nSQL State  : 42S22\nError Code : 1054\nMessage    : (conn\u003d186) Unknown column \u0027role_can_receive_notification\u0027 in \u0027notification_configs\u0027\nLocation   : src\\main\\resources\\db\\migration\\V20__update notification configs table, rename role_can_receive notification to role id.sql (C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V20__update notification configs table, rename role_can_receive notification to role id.sql)\nLine       : 1\nStatement  : ALTER TABLE notification_configs\r\n    CHANGE role_can_receive_notification role_id BIGINT\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "19",
+      "targetSchemaVersion": "20",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "20",
+          "description": "update notification configs table, rename role can receive notification to role id",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V20__update notification configs table, rename role_can_receive notification to role id.sql",
+          "executionTime": 16
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-24T01:07:26.941005400",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "20",
+      "targetSchemaVersion": "20.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "20.1",
+          "description": "add foreign key constraint on role table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V20_1__add foreign key constraint on role table.sql",
+          "executionTime": 23
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-24T23:02:56.453341",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "20.1",
+      "targetSchemaVersion": "21",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "21",
+          "description": "add supply group table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V21__add supply group table.sql",
+          "executionTime": 36
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-26T23:44:12.843398",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "21",
+      "targetSchemaVersion": "22",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "22",
+          "description": "drop supply groups",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V22__drop supply groups.sql",
+          "executionTime": 124
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-28T16:39:24.615823900",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "22",
+      "targetSchemaVersion": "22.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "22.1",
+          "description": "remove audit on supplies table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V22_1__remove audit on supplies table.sql",
+          "executionTime": 30
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-28T16:40:55.916361900",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "22.1",
+      "targetSchemaVersion": "22.3",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "22.3",
+          "description": "drop unique indexes",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V22_3__drop unique indexes.sql",
+          "executionTime": 73
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-28T16:42:53.750431900",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "22.3",
+      "targetSchemaVersion": "22.4",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "22.4",
+          "description": "drop column code on supplies table",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V22_4__drop column code on supplies table.sql",
+          "executionTime": 29
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-28T22:39:25.441588500",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "22.4",
+      "targetSchemaVersion": "22.5",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "22.5",
+          "description": "drop column status on supply",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V22_5__drop column status on supply.sql",
+          "executionTime": 13
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-07-28T22:44:44.389826200",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "22.5",
+      "targetSchemaVersion": "23",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "23",
+          "description": "add last maintenance date and last inspection date",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V23__add last maintenance date and last inspection date.sql",
+          "executionTime": 52
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-08-01T12:43:12.648992500",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "23",
+      "targetSchemaVersion": "23.1",
+      "schemaName": "mdm_equipment",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "23.1",
+          "description": "rename last time inspection to inspection date, and same with maintenance",
+          "type": "SQL",
+          "filepath": "C:\\Intellij\\mdm\\equipment-service\\src\\main\\resources\\db\\migration\\V23_1__rename last time inspection to inspection date, and same with maintenance.sql",
+          "executionTime": 20
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.19.1",
+      "database": "mdm_equipment",
+      "warnings": [],
+      "timestamp": "2023-08-01T13:39:42.991043800",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    }
+  ]
+}

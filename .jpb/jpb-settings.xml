@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DatabaseMigrationSettings" lastSelectedDirectory="equipment-service\src\main\resources\db\migration" />
+  <component name="JpaLiquibaseChangesConfig">
+    <exclude-change idName="notifications#content" tagName="dropColumn" />
+    <exclude-change idName="notifications#content" tagName="addColumn" />
+    <exclude-change idName="notification_configs#notification_type" tagName="addNotNullConstraint" />
+    <exclude-change idName="notifications#created_at" tagName="dropColumn" />
+    <exclude-change idName="notifications#created_at" tagName="addColumn" />
+    <exclude-change idName="notifications#approver_id" tagName="addColumn" />
+    <exclude-change idName="notifications#created_by_id" tagName="addColumn" />
+    <exclude-change idName="notifications#department_id" tagName="addColumn" />
+    <exclude-change idName="notifications#equipment_id" tagName="addColumn" />
+    <exclude-change idName="notifications#from_department_id" tagName="addColumn" />
+    <exclude-change idName="notifications#responsible_person_id" tagName="addColumn" />
+    <exclude-change idName="notifications#to_department_id" tagName="addColumn" />
+  </component>
+  <component name="PersistenceUnitSettings">
+    <persistence-units>
+      <persistence-unit name="Organization service">
+        <packages>
+          <package value="com.mdm.organizationservice" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit name="Equipment service">
+        <packages>
+          <package value="com.mdm.equipmentservice" />
+        </packages>
+      </persistence-unit>
+    </persistence-units>
+  </component>
+</project>

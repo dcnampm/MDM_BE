@@ -1,0 +1,179 @@
+POST http://localhost:8080/realms/mdm-local/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+#client_id=api-gateway&client_secret=OHpzjlsRVYH3SrdhNeHUiQtL1800JvKg&username=admin&password=admin&grant_type=password
+client_id=api-gateway&client_secret=4ICrxzAzPDQa4QKxh9AE8GlB8mGduJ1q&username=admin&password=123456&grant_type=password
+
+> {%
+
+    client.global.set("auth_token", response.body.access_token);
+
+%}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N1 Thiết bị chẩn đoán hình ảnh",
+  "alias": "N01",
+  "id": 1
+}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N2 Thiết bị hồi sức cấp cứu",
+  "alias": "N02",
+  "id": 2
+}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N3 Thiết bị lọc máu",
+  "alias": "N03",
+  "id": 3
+}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N4 Thiết bị phòng mổ",
+  "alias": "N04",
+  "id": 4
+}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N5 Thiết bị chuyên khoa ung bướu và y học hạt nhân",
+  "alias": "N05",
+  "id": 5
+}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N6 Thiết bi chuyên khoa RHM-THM-Mắt",
+  "alias": "N06",
+  "id": 6
+}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N7 Thiết bị chuyên khoa xét nghiệm",
+  "alias": "N07",
+  "id": 7
+}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N8 Thiết bị kiểm soát nhiễm khuẩn",
+  "alias": "N08",
+  "id": 8
+}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N9 Thiết bị chuyên khoa sản nhi",
+  "alias": "N09",
+  "id": 9
+}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N10 Thiết bị thăm dò chức năng",
+  "alias": "N10",
+  "id": 10
+}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N11 Thiết bị nội soi chuẩn đoán",
+  "alias": "N11",
+  "id": 11
+}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N12 Thiết bị hồi phục chức năng- Vật lý trị liệu",
+  "alias": "N12",
+  "id": 12
+}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N13 Thiết bị dùng chung",
+  "alias": "N13",
+  "id": 13
+}
+
+###
+POST http://localhost:8002/api/v1/equipment-groups
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "note": "",
+  "name": "N14 Thiết bị khám- điều trị chuyên dụng",
+  "alias": "N14",
+  "id": 14
+}

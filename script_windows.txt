@@ -1,0 +1,10 @@
+# To run this script, copy all the code in this file and paste it into your terminal
+# while in the root directory of your project. This will execute the commands in the script.
+
+mvn -pl common-service -am clean compile package install -DskipTests
+
+# Add the -DskipTests option to the Maven build command to skip tests.
+# In the common service module, we don't specify the data source, which can cause
+# an error to be thrown during packaging. This option helps avoid that error.
+
+mvn -pl '!:common-service' clean install compile -DskipTests

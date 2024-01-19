@@ -1,0 +1,1 @@
+ALTER TABLE handoverTickets RENAME handover_tickets;

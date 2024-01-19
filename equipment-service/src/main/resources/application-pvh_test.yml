@@ -1,0 +1,29 @@
+application:
+  security:
+    jwt:
+      secret-key: db3c9e170b50381505ae34d438745f897ccb3ad5cbfcc1608eaba3fee5cc5d20
+      expiration: 120000
+    refresh-token:
+      expiration: 3000000
+spring:
+#  data:
+#    mongodb:
+#      database: notification
+#      host: localhost
+#      port: 27017
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          issuer-uri: ${keycloak.server}/realms/${keycloak.realm-name}
+#          jwk-set-uri: ${keycloak.server}/realms/${keycloak.realm-name}/protocol/openid-connect/certs
+  datasource:
+    #url: jdbc:mariadb://materials.cabz0qft0ifx.eu-north-1.rds.amazonaws.com:3306/mdm_equipment
+    url: jdbc:mariadb://localhost:3305/mdm_equipment
+    username: root
+    password: root
+    driver-class-name: org.mariadb.jdbc.Driver
+  flyway:
+    enabled: false
+server:
+  port: 8002

@@ -1,0 +1,462 @@
+POST http://localhost:8080/realms/mdm-local/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+#client_id=api-gateway&client_secret=OHpzjlsRVYH3SrdhNeHUiQtL1800JvKg&username=admin&password=admin&grant_type=password
+client_id=api-gateway&client_secret=4ICrxzAzPDQa4QKxh9AE8GlB8mGduJ1q&username=admin&password=123456&grant_type=password
+
+> {%
+    client.global.set("auth_token", response.body.access_token);
+%}
+
+<> 2023-06-07T231442.200.json
+<> 2023-06-07T231417.200.json
+<> 2023-06-07T182015.200.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "123 ABC Street, Ho Chi Minh City, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84909567432",
+  "name": "Phòng Vật tư thiết bị y tế",
+  "alias": "PVTBTYT",
+  "email": "PhongVatTuThietBiYTe@gmail.com"
+}
+
+<> 2023-06-07T231442.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "456 XYZ Street, Hanoi, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84905578901",
+  "name": "Khoa kiểm soát nhiễm khuẩn",
+  "alias": "KKSNNK",
+  "email": "KhoaKiemSoatNhiemKhuan@gmail.com"
+}
+
+<> 2023-06-07T231442-1.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "789 PQR Street, Da Nang, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84903215678",
+  "name": "Khoa Chẩn đoán hình ảnh",
+  "alias": "KCDHA",
+  "email": "KhoaChanDoanHinhAnh@gmail.com"
+}
+
+<> 2023-06-07T231442-2.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "321 MNO Street, Hue, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84904123678",
+  "name": "Khoa Hóa Sinh",
+  "alias": "KHS",
+  "email": "KhoaHoaSin@gmail.com"
+}
+
+<> 2023-06-07T231442-3.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "654 JKL Street, Nha Trang, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84901472536",
+  "name": "Khoa Huyết học truyền máu",
+  "alias": "KHHHTM",
+  "email": "KhoaHuyetHocTruyenMau@gmail.com"
+}
+
+<> 2023-06-07T231442-4.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "987 DEF Street, Vung Tau, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84908246127",
+  "name": "Khoa Vi Sinh",
+  "alias": "KVS",
+  "email": "KhoaViSinh@gmail.com"
+}
+
+<> 2023-06-07T231442-5.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "456 XYZ Street, Hanoi, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84907321564",
+  "name": "Khoa Giải phẫu bệnh",
+  "alias": "KGPB",
+  "email": "KhoaGiaiPhauBenh@gmail.com"
+}
+
+<> 2023-06-07T231443.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "789 PQR Street, Da Nang, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84908263417",
+  "name": "Khoa Khám Bệnh",
+  "alias": "KKKB",
+  "email": "KhoaKhamBenh@gmail.com"
+}
+
+<> 2023-06-07T231443-1.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "321 MNO Street, Hue, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84906247539",
+  "name": "Khoa Mắt",
+  "alias": "KM",
+  "email": "KhoaMat@gmail.com"
+}
+
+<> 2023-06-07T231443-2.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "654 JKL Street, Nha Trang, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84903124758",
+  "name": "Khoa Răng Hàm Mặt",
+  "alias": "KRHM",
+  "email": "KhoaRangHamMat@gmail.com"
+}
+
+<> 2023-06-07T231443-3.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "987 DEF Street, Vung Tau, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84901325476",
+  "name": "Khoa Y học cổ truyền",
+  "alias": "KYHCT",
+  "email": "KhoaYHocCoTruyen@gmail.com"
+}
+
+<> 2023-06-07T231443-4.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "123 ABC Street, Ho Chi Minh City, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84908247563",
+  "name": "Khoa Lọc Máu",
+  "alias": "KLM",
+  "email": "KhoaLocMau@gmail.com"
+}
+
+<> 2023-06-07T231443-5.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "456 XYZ Street, Hanoi, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84905573629",
+  "name": "Khoa Cấp cứu",
+  "alias": "KCC",
+  "email": "KhoaCapCuu@gmail.com"
+}
+
+<> 2023-06-07T231443-6.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "789 PQR Street, Da Nang, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84903254768",
+  "name": "Khoa Hồi sức tích cực",
+  "alias": "KHSTC",
+  "email": "KhoaHoiSucTichCuc@gmail.com"
+}
+
+<> 2023-06-07T231443-7.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "321 MNO Street, Hue, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84901427635",
+  "name": "Khoa Nội tổng hợp",
+  "alias": "KNTH",
+  "email": "KhoaNoiTongHop@gmail.com"
+}
+
+<> 2023-06-07T231443-8.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "654 JKL Street, Nha Trang, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84908253417",
+  "name": "Khoa Tim mạch",
+  "alias": "KTM",
+  "email": "KhoaTimMach@gmail.com"
+}
+
+<> 2023-06-07T231443-9.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "987 DEF Street, Vung Tau, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84907315264",
+  "name": "Khoa Truyền nhiễm",
+  "alias": "KTN",
+  "email": "KhoaTruyenNhiem@gmail.com"
+}
+
+<> 2023-06-07T231444.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "123 ABC Street, Ho Chi Minh City, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84906273519",
+  "name": "Khoa Phẩu thuật gây mê",
+  "alias": "KPTGM",
+  "email": "KhoaPhauThuatGayMe@gmail.com"
+}
+
+<> 2023-06-07T231444-1.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "456 XYZ Street, Hanoi, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84909532741",
+  "name": "Khoa Sản",
+  "alias": "KS",
+  "email": "KhoaSan@gmail.com"
+}
+
+<> 2023-06-07T231444-2.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "789 PQR Street, Da Nang, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84905512376",
+  "name": "Khoa Phụ khoa",
+  "alias": "KPK",
+  "email": "KhoaPhuKhoa@gmail.com"
+}
+
+<> 2023-06-07T231444-3.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "321 MNO Street, Hue, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84903275648",
+  "name": "Khoa Ung Bướu",
+  "alias": "KUB",
+  "email": "KhoaUngBuou@gmail.com"
+}
+
+<> 2023-06-07T231444-4.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "654 JKL Street, Nha Trang, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84901427635",
+  "name": "Khoa Chấn Thương Chỉnh Hình",
+  "alias": "KCTCHH",
+  "email": "KhoaChanThuongChinhHinh@gmail.com"
+}
+
+<> 2023-06-07T231444.409.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "987 DEF Street, Vung Tau, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84908253471",
+  "name": "Khoa thần kinh lồng ngực",
+  "alias": "KTKLN",
+  "email": "KhoaThanKinhLongNguc@gmail.com"
+}
+
+<> 2023-06-07T231444-5.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "123 ABC Street, Ho Chi Minh City, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84907321564",
+  "name": "Khoa Ngoại Tiết Niệu",
+  "alias": "KNTN",
+  "email": "KhoaNgoaiTietNieu@gmail.com"
+}
+
+<> 2023-06-07T231445.409.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "456 XYZ Street, Hanoi, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84906273419",
+  "name": "Khoa Tiêu Hóa",
+  "alias": "KTH",
+  "email": "KhoaTieuHoa@gmail.com"
+}
+
+<> 2023-06-07T231445.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "789 PQR Street, Da Nang, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84909123756",
+  "name": "Khoa Nhi",
+  "alias": "KN",
+  "email": "KhoaNhi@gmail.com"
+}
+
+<> 2023-06-07T231445-1.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "321 MNO Street, Hue, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84905572316",
+  "name": "Khoa BV ĐK Quốc Tế",
+  "alias": "KBVDKT",
+  "email": "KhoaBVDKQuocTe@gmail.com"
+}
+
+<> 2023-06-07T231445-2.201.json
+
+###
+POST http://localhost:8002/api/v1/departments
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "address": "654 JKL Street, Nha Trang, Vietnam",
+  "activeStatus": "ACTIVE",
+  "phone": "+84909152736",
+  "name": "Khoa Dinh dưỡng",
+  "alias": "KDD",
+  "email": "KhoaDinhDuong@gmail.com"
+}
+
+<> 2023-06-07T231445-3.201.json
+

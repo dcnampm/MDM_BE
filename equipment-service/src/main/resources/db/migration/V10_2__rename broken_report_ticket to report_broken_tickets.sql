@@ -1,0 +1,1 @@
+ALTER TABLE broken_report_tickets RENAME report_broken_tickets;

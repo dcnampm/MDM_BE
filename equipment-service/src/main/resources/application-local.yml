@@ -1,0 +1,33 @@
+keycloak:
+  port: 8080
+  address: http://localhost
+  server: ${keycloak.address}:${keycloak.port}
+  realm-name: mdm-local
+  client-id: api-gateway
+  client-secret: OHpzjlsRVYH3SrdhNeHUiQtL1800JvKg
+  admin:
+    username: admin
+    password: admin
+    realm-name: master
+    client-id: admin-cli
+spring:
+  data:
+    mongodb:
+      database: notification
+      host: localhost
+      port: 27017
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${keycloak.server}/realms/${keycloak.realm-name}
+          jwk-set-uri: ${keycloak.server}/realms/${keycloak.realm-name}/protocol/openid-connect/certs
+  datasource:
+    url: jdbc:mariadb://localhost:3306/mdm_equipment
+    username: root
+    password: root
+    driver-class-name: org.mariadb.jdbc.Driver
+  flyway:
+    enabled: false
+server:
+  port: 8002

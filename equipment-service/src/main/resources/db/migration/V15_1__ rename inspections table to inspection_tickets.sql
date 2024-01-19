@@ -1,0 +1,1 @@
+ALTER TABLE inspections RENAME inspection_tickets;

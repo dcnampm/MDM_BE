@@ -1,0 +1,1 @@
+ALTER TABLE liquidations RENAME liquidation_tickets;
